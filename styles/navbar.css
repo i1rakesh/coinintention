@@ -7,6 +7,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background: #041334;
+  overflow-x: scroll;
 }
 
 a {
@@ -44,18 +45,19 @@ nav {
 }
 
 .nav-link {
-  position: fixed;
   width: 94%;
   top: 5rem;
   left: 18px;
   float: left;
 }
-
 .nav-link a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
+  display: inline-block;
+  padding: 15px 20px;
 }
+.hamburger {
+  display: none;
+}
+
 
 .nav-link a:hover {
   background-color: rgb(255, 255, 255);
@@ -169,7 +171,7 @@ td span {
   color: white;
   line-height: 2rem;
   display: flex;
-  gap: 20rem;
+  gap: 10rem;
   padding: 2rem;
 }
 .check-points {
@@ -204,6 +206,9 @@ td span {
   transform-style: preserve-3d;
   position: absolute;
 }
+.background-graph img{
+  width: 30vw;
+}
 .glass-container {
   position: relative;
   z-index: 9;
@@ -229,34 +234,140 @@ td span {
 footer{
   color: white;
   display: flex;
-  margin: 2rem;
-  gap: 5rem;
+  width: 100%;
+  gap: 3rem;
 }
 .about{
   width: 30vw;
   column-gap: 2rem;
 }
 .company{
-  width: 20vw;
+  width: 15vw;
   display:flex;
   flex-direction: column;
   line-height: 2rem;
 }
-@media screen and (min-width: 600px) {
+.company h2,a{
+  width: fit-content;
+}
+@media screen and (max-width: 600px) {
+  nav{
+   height: 10vh;
+   display: block;
+   gap: 0;
+  }
   .nav-link {
-    display: block;
-    position: static;
-    width: auto;
-    margin-right: 20px;
-    background: none;
+    display: flex;
+    gap: 1rem;
   }
-
   .nav-link a {
-    display: inline-block;
-    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }  
+  .dataTable{
+    overflow-y: scroll;
+    overflow-x: scroll;
+    justify-content:unset;
+  text-align:unset;
   }
-
-  .hamburger {
-    display: none;
+  .third-container{
+    gap:25rem;
+    flex-direction: column;
+  }
+  .glass-container{
+    min-width: 80vw; 
+  }
+  .glass-wrapper{
+    width: 80vw;
+    
+  }
+  .check-points{
+    width: 60vw;
+    margin-left: 2rem;
+    justify-content: center;
+  }
+  footer{
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  nav{
+    height: 10vh;
+    display: block;
+    gap: 0;
+   }
+   .nav-link {
+     display: flex;
+     gap: 1rem;
+   }
+   .nav-link a {
+     display: block;
+     text-align: center;
+     padding: 10px 0;
+   }  
+   .dataTable{
+     overflow-y: scroll;
+     overflow-x: scroll;
+     justify-content:unset;
+   text-align:unset;
+   }
+   .third-container{
+     gap:25rem;
+     flex-direction: column;
+   }
+   .glass-container{
+     min-width: 80vw; 
+   }
+   .glass-wrapper{
+     width: 80vw;
+     
+   }
+   .check-points{
+     width: 60vw;
+     margin-left: 2rem;
+     justify-content: center;
+   }
+   footer{
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+}
+@media only screen and (max-width: 1200px) {
+  nav{
+    height: 10vh;
+    display: block;
+    gap: 0;    
+   }
+   .nav-link {
+     display: flex;
+     gap: 4rem;
+     justify-content: center;
+   }
+   .nav-link a {
+     display: block;
+     text-align: center;
+     padding: 10px 0;
+   }
+  .third-container{
+    gap:2rem;
+  }
+  .second-container{
+    flex-direction: column;
+  }
+  .info{
+    flex-direction: row;
+    width: 100%;
+  }
+  .info .points{
+    width: 100%;
+  }
+  .second-container img{
+    width: 80%;
+  }
+  .glass-container{
+    width: 40vw;
   }
 }
